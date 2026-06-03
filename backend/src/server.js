@@ -13,6 +13,11 @@ pool.getConnection()
     .then(() => console.log("MySQL connected"))
     .catch((err) => console.error("DB connection failed:", err.message));
 
+
+const authRoutes = require("./routes/authRoutes");
+app.use("/api/auth", authRoutes);
+
+
 app.get("/", (req, res) => {
     res.send("API Running");
 });
