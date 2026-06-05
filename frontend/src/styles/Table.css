@@ -1,0 +1,183 @@
+.table-container {
+    padding: 2rem;
+}
+
+.table-container h2 {
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.table-toolbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.table-toolbar input,
+.table-toolbar select {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.table-toolbar button {
+    padding: 0.4rem 1rem;
+    background-color: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.table-toolbar button:hover {
+    background-color: #4338ca;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+    background-color: #4f46e5;
+    color: #fff;
+}
+
+thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+thead th:hover {
+    background-color: #4338ca;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+tbody td {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.badge-admin {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
+.badge-user {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-store_owner {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+    margin-bottom: 1.2rem;
+    color: #1f2937;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.modal-field label {
+    font-size: 0.85rem;
+    color: #374151;
+}
+
+.modal-field input,
+.modal-field select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.modal-field .field-error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modal-actions button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #4f46e5;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}

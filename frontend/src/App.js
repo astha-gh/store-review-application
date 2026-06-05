@@ -4,6 +4,9 @@ import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Stores from "./pages/Stores";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminUsers from "./pages/admin/AdminUsers";
+import AdminStores from "./pages/admin/AdminStores";
 
 function App() {
   return (
@@ -13,9 +16,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/stores" element={
-            <PrivateRoute roles={["user"]}>
-              <Stores />
-            </PrivateRoute>
+            <PrivateRoute roles={["user"]}><Stores /></PrivateRoute>
+          } />
+          <Route path="/admin/dashboard" element={
+            <PrivateRoute roles={["admin"]}><AdminDashboard /></PrivateRoute>
+          } />
+          <Route path="/admin/users" element={
+            <PrivateRoute roles={["admin"]}><AdminUsers /></PrivateRoute>
+          } />
+          <Route path="/admin/stores" element={
+            <PrivateRoute roles={["admin"]}><AdminStores /></PrivateRoute>
           } />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
