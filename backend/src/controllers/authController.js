@@ -19,7 +19,7 @@ const register = async (req, res) => {
         return res.status(400).json({ message: "All fields are required" });
     }
     if (name.length < 20 || name.length > 60) {
-        return res.status(400).json({ message: "Name must be 20–60 characters" });
+        return res.status(400).json({ message: "Name must be 20 to 60 characters" });
     }
     if (address.length > 400) {
         return res.status(400).json({ message: "Address max 400 characters" });
@@ -27,7 +27,7 @@ const register = async (req, res) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
     if (!passwordRegex.test(password)) {
         return res.status(400).json({
-            message: "Password must be 8–16 characters with at least one uppercase letter and one special character",
+            message: "Password must be 8 to 16 characters with at least one uppercase letter and one special character",
         });
     }
 
@@ -64,6 +64,7 @@ const login = async (req, res) => {
         if (rows.length === 0) {
             return res.status(401).json({ message: "Invalid credentials" });
         }
+        
 
         const user = rows[0];
         const match = await bcrypt.compare(password, user.password);
