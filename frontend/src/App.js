@@ -7,6 +7,8 @@ import Stores from "./pages/Stores";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminStores from "./pages/admin/AdminStores";
+import OwnerDashboard from "./pages/owner/OwnerDashboard";
+
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
             <PrivateRoute roles={["admin"]}><AdminStores /></PrivateRoute>
           } />
           <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="/owner/dashboard" element={
+            <PrivateRoute roles={["store_owner"]}><OwnerDashboard /></PrivateRoute>
+          } />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
