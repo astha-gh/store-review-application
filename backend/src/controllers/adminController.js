@@ -131,8 +131,11 @@ const getAllStores = async (req, res) => {
 
     query += " GROUP BY s.id";
 
-    const sortField = ["name", "email", "address", "rating"].includes(req.query.sortBy)
-        ? `s.${req.query.sortBy}` : "s.name";
+    const sortField = req.query.sortBy === "rating"
+        ? "rating"
+        : ["name", "email", "address"].includes(req.query.sortBy)
+            ? `s.${req.query.sortBy}`
+            : "s.name";
     const sortOrder = req.query.order === "desc" ? "DESC" : "ASC";
     query += ` ORDER BY ${sortField} ${sortOrder}`;
 
