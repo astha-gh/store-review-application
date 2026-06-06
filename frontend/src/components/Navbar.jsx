@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "../styles/Navbar.css";
 
+
 export default function Navbar() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -27,6 +28,12 @@ export default function Navbar() {
           <Link to="/owner/dashboard">Dashboard</Link>
         )}
       </div>
+      <Link
+        to="/change-password"
+        style={{ color: "#fff", fontSize: "0.85rem" }}
+      >
+        Change Password
+      </Link>
       <div className="navbar-right">
         <span>{user?.name}</span>
         <button onClick={handleLogout}>Logout</button>

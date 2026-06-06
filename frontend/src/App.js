@@ -8,6 +8,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminStores from "./pages/admin/AdminStores";
 import OwnerDashboard from "./pages/owner/OwnerDashboard";
+import ChangePassword from "./pages/ChangePassword";
 
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
           <Route path="*" element={<Navigate to="/login" />} />
           <Route path="/owner/dashboard" element={
             <PrivateRoute roles={["store_owner"]}><OwnerDashboard /></PrivateRoute>
+          } />
+          <Route path="/change-password" element={
+            <PrivateRoute roles={["user", "admin", "store_owner"]}>
+              <ChangePassword />
+            </PrivateRoute>
           } />
         </Routes>
       </BrowserRouter>
