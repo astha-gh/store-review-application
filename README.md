@@ -70,8 +70,6 @@ A full-stack web application where users can discover and rate stores registered
 
 ## Screenshots
 
-> To add screenshots: take them from your running app, place them in a `/screenshots` folder in the repo root, and the images below will automatically appear.
-
 ### Login Page
 ![Login Page](screenshots/login.png)
 
