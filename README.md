@@ -147,7 +147,7 @@ cd store-review-application
 Open MySQL Workbench (or any MySQL client) and run:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS store_review_db;
+CREATE DATABASE store_review_db;
 USE store_review_db;
 
 CREATE TABLE users (
